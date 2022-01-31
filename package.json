@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "dotenv": "^14.3.2",
+    "elliptic": "^6.5.4",
+    "jayson": "^3.6.6"
+  }
 }
