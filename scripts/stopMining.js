@@ -1,7 +1,15 @@
-const client = require('./client');
+const axios = require("axios");
+const { PORT } = require("../config"); 
 
-// invoke functions
-client.request("stopMining", [], function(err, response) {
-    if(err) throw err;
-    console.log(response.result);
-})
+axios.defaults.baseURL = `http://localhost:${PORT}`;
+
+function stopMining() {
+    axios.post('/stopMining').then(res => {
+        console.log(res.data);
+    })
+    .catch(err => {
+        console.log(err);
+    }) 
+}
+
+stopMining();
